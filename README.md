@@ -18,6 +18,7 @@ Prior to merging the datsets, some data cleaning needed to be applied. The rows 
 The first thing that was looked at was the distribution of the target variable:
 
 
+
 There is a clear imbalance in the taget, particularly for the high COVID level class. Some sort of oversampling like Synthetic Minority Oversampling Technique (SMOTE) will need to be applied.
 
 To help build the case for why identifying high COVID level areas is important, visualizations of the number of COVID cases by community level were created.
