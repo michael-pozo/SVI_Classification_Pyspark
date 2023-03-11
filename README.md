@@ -17,18 +17,21 @@ Prior to merging the datsets, some data cleaning needed to be applied. The rows 
 
 The first thing that was looked at was the distribution of the target variable:
 
+![Target Distro](https://user-images.githubusercontent.com/66101132/224489058-bd63a68f-2f0c-4294-9a86-64a938748944.png)
 
 
 There is a clear imbalance in the taget, particularly for the high COVID level class. Some sort of oversampling like Synthetic Minority Oversampling Technique (SMOTE) will need to be applied.
 
 To help build the case for why identifying high COVID level areas is important, visualizations of the number of COVID cases by community level were created.
 
+![COVID Cases By Class ](https://user-images.githubusercontent.com/66101132/224489065-44ff202d-11e8-4a3f-b86d-3e2c76820b21.png)
 
 Although high COVID level census tracts make up a small percentage (~5%) of overall NY census tracts, they make up almost a third of COVID cases. Correctly identifying these areas will be extremely important to our stakeholders, even at the cost of more false positives. Along with accuracy, class 2 recall will be used as a metric for evaluating model performance.
 
 
 Knowing what we know about how COVID is spread, it is also important to get a sense of how densly populated New York is:
 
+![Distribution of Population by Tract Area](https://user-images.githubusercontent.com/66101132/224489075-2ca8df9c-2f11-4cf3-a7bb-878cdffa2939.png)
 
 This scatterplot confirms that the majority of the New York population lives in small areas, which lends itself more to the spread of COVID. An early hypothesis is that both of these features will be highly influential. 
 
@@ -53,11 +56,13 @@ The top 5 most influential features are displayed above. Features like area of a
 
 Looking at the distribution of population in poverty for the model's predicted classes, high level COVID areas have a noticeably higher mean poverty level. 
 
+![Insight 1 - Poverty](https://user-images.githubusercontent.com/66101132/224489111-bbcea9fb-2dc2-4800-939c-5ff4a64796d3.png)
 
 Using statistical analyses like ANOVA and two tailed t-tests, it was confirmed that the high level COVID predictions have a meaningfully (95% Confidence level) higher level of population living in poverty.
 
 Similar insights can be drawn for the number of people living in mobile homes. 
 
+![Insight 2 - Mobile Homes](https://user-images.githubusercontent.com/66101132/224489115-c60c7754-e5a6-4224-bb7f-6eca18faca17.png)
 
 ## Recommendations 
 
