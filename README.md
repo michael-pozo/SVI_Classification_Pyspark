@@ -43,6 +43,7 @@ For the baseline model, a simple logistic regression with ridge regularization w
 A summary of the model iterations with evaluations is listed below:
 
 
+<img width="524" alt="Model Results" src="https://user-images.githubusercontent.com/66101132/224490232-cc154b64-3d68-4e5d-8abb-d722913e562f.png">
 
 
 Many of the model versions struggled with overfitting and few were able to achieve a high recall score for the high COVID census tracts. Ultimately, the Untuned Logistic Regression with SMOTE was chosen as the final model for its balance between accuracy and recall. 
